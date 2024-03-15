@@ -2,21 +2,18 @@
 class Vertice{
 
 	private $id;
-	private $nombre;
-	private $descripcion;
-	private $calificacion;
+	private $visitado;
 	private $precio;
 	private $categoria;
-	private $dv;
+	private $duracion;
 
-	public function __construct($id, $nombre, $descripcion, $calificacion, $precio, $categoria, $dv){
-		$this->id = $id;
-		$this->nombre-> $nombre;
-		$this->descripcion-> $descripcion;
-		$this->calificacion-> $calificacion;
-		$this->precio-> $precio;
-		$this->categoria-> $categoria;
-		$this->dv-> $dv;
+	public function __construct($i,$p,$c,$d){
+		$this->id = $i;
+		$this->precio = $p;
+		$this->categoria = $c;
+		$this->duracion = $d;
+		$this->visitado = false;
+		
 
 	}
 
@@ -24,59 +21,39 @@ class Vertice{
 		return $this->id;
 	}
 
-	public function setId($id){
-		$this->id = $id;
+	public function setId($i){
+		$this->id = $i;
 	}
 
-	public function getnombre(){
-		return $this->nombre;
+	public function getVisitado(){
+		return $this->visitado;
 	}
 
-	public function setnombre($nombre){
-		$this->nombre = $nombre;
+	public function setVisitado($v){
+		$this->visitado = $v;
 	}
 
-	public function getdescripcion(){
-		return $this->descripcion;
-	}
-
-	public function setdescrpcion($descripcion){
-		$this->descripcion = $descripcion;
-	}
-
-	public function getcalificacion(){
-		return $this->calificacion;
-	}
-
-	public function setcalificacion($calificacion){
-		$this->calificacion = $calificacion;
-	}
-
-	public function getprecio(){
+	public function getPrecio(){
 		return $this->precio;
 	}
 
-	public function setprecio($precio){
-		$this->precio = $precio;
+	public function setPrecio($p){
+		$this->precio = $p;
 	}
 
-	public function getcategoria(){
+	public function getCategoria(){
 		return $this->categoria;
 	}
-
-	public function setcategoria($categoria){
-		$this->categoria = $categoria;
+	public function setCategoria($c){
+		$this->categoria = $c;
 	}
-
-	public function getdv(){
-		return $this->dv;
+	public function getDuracion(){
+		return $this->duracion;
 	}
-
-	public function setdv($dv){
-		$this->dv = $dv;
+	public function setDuracion($d){
+		$this->duracion = $d;
 	}
 
 
-	
 }
 ?>

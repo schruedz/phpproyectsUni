@@ -10,10 +10,46 @@ Class Grafo{
 		public $visited = [];
 		public $graph = [];
 
-		public function __construct($dir = true){
-			$this->matrizA = null;
-			$this->vectorV = null;
+
+		public function __construct(bool $dir = true, Array $m = [], Array $v = [], Array $visited = [], Array $graph = []){
+			$this->matrizA = $m;
+			$this->vectorV = $v;
+			$this->visited = $visited;
+			$this->graph = $graph;
 			$this->dirigido = $dir;
+		}
+
+		// Getters 
+		public function getMatrizA(){
+			return $this->matrizA;
+		}
+
+		public function getVectorV(){
+			return $this->vectorV;
+		}
+
+		public function getDirigido(){
+			return $this->dirigido;
+		}
+
+		public function getVisited(){
+			return $this->visited;
+		}
+
+		public function getGraph(){
+			return $this->graph;
+		}
+
+		// End Getters
+
+		public function toJson() {
+			return json_encode([
+				"dirigido" => $this->getDirigido(),
+				"matrizA" => $this->getMatrizA(),
+				"vectorV" => $this->getVectorV(),
+				"visited" => $this->getVisited(),
+				"graph" => $this->getGraph()
+			]);
 		}
 
 		public function addVertex($v){
@@ -56,14 +92,6 @@ Class Grafo{
 
 		public function getAdyacentes2($v){
 			return $this->matrizA[$v];
-		}
-
-		public function getMatrizA(){
-			return $this->matrizA;
-		}
-
-		public function getVectorV(){
-			return $this->vectorV;
 		}
 
 		public function ouputDegree($v){	
@@ -134,7 +162,6 @@ public function caminoMasCorto($a,$b){
             $Q = array();
             foreach(array_keys($this->matrizA) as $val) $Q[$val] = 99999;
             $Q[$a] = 0;
-            // inicio calculo
             while(!empty($Q)){
                 $min = array_search(min($Q), $Q);
                 if($min == $b) break;
@@ -154,18 +181,26 @@ public function caminoMasCorto($a,$b){
             $path = array_reverse($path);
             return $path;
         }
-private function DFSR($n, $r){
-		array_push($r, $n);
-		$adya = array_keys($this->getAdyacentes2($n));
-		sort($adya);
-		foreach ($adya as $n_adya) {
-			if (!in_array($n_adya, $r)){
-				$r = $this->DFSR($n_adya, $r);
+
+		public function DFS($n){
+			$R = [];
+			if (isset($n)) {
+				$R = $this->DFSR($n, $R);
 			}
+			return$R;
 		}
-		return$r;
-	}
 		
+		private function DFSR($n, $r){
+			array_push($r, $n);
+			$adya = array_keys($this->getAdyacentes2($n));
+			sort($adya);
+			foreach ($adya as $n_adya) {
+				if (!in_array($n_adya, $r)){
+					$r = $this->DFSR($n_adya, $r);
+				}
+			}
+			return$r;
+		}
 
 		public function BFS($Nodo){
 			$cola = [];
@@ -189,4 +224,3 @@ private function DFSR($n, $r){
 		}
 
 }
-?>
