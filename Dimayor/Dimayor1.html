@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<style>
+		* {
+			list-style: none;
+			padding: 0px;
+			margin: auto auto;
+		}
+
+		header {
+			position: relative;
+			margin: auto auto;
+			width: 1000px;
+			height: 150px;
+
+
+		}
+
+		#logo {
+			position: absolute;
+			margin-top: 40px;
+			margin-left: 20px;
+			width: 200px;
+			height: 80px;
+			color: black;
+			font-family: 'Tangerine', serif;
+			font-size: 100px;
+			text-align: center;
+			line-height: 80px;
+			font-weight: bold;
+		}
+
+		#twitter {
+			position: absolute;
+			top: 40px;
+			right: 60px;
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			box-shadow: 5px 5px 5px #888888;
+		}
+
+		#facebook {
+			position: absolute;
+			top: 40px;
+			right: 180px;
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			box-shadow: 5px 5px 5px #888888;
+		}
+
+		#Youtube {
+			position: absolute;
+			top: 40px;
+			right: 300px;
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			box-shadow: 5px 5px 5px #888888;
+		}
+		#contenido{
+			margin: auto auto;
+		}
+
+		nav {
+			position: relative;
+			margin: auto auto;
+			width: 1000px;
+			height: 48px;
+		
+
+		}
+
+		.botones {
+			float: left;
+			margin: 0px 1px;
+			width: 198px;
+			height: 48px;
+			background: rgba(100, 0, 255, 1);
+			font-family: 'Tangerine', serif;
+			text-align: center;
+			line-height: 48px;
+			font-size: 25px;
+			font-weight: bold;
+			color: #FFFFFF;
+			border-radius: 5px;
+			box-shadow: 5px 5px 5px #888888;
+		}
+
+		a .botones:hover {
+			background: rgba(100, 0, 255, .4);
+		}
+
+		a .botones:active {
+			background: rgba(255, 0, 100, 1);
+		}
+
+
+		#tope {
+			position: relative;
+			top: 5px;
+			left:5px;
+			width: 1000px;
+			height: 260px;
+			margin: auto auto;
+
+		}
+	
+		#tope ul {
+			width: 1000px;
+			height: 400px;
+			
+		}
+
+		#tope ul li {
+			float: left;
+			width: 300px;
+			margin: 1px 10px;
+			height: 200px;
+			text-align: center;
+		}
+
+		#tope ul li img {
+			border-radius: 100%;
+		}
+
+		#tope ul li h1 {
+			font-family: 'Tangerine', serif;
+			font-weight: bold;
+			font-size: 40px;
+		}
+
+		#tope ul li p {
+			font-size: 14px;
+			top: 1px;
+		}
+
+
+		section {
+			position: relative;
+			top: 5px;
+			right: 5px;
+			width: 1000px;
+			height: 500px;
+			margin: auto auto;
+
+		}
+
+		aside#Izq {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 200px;
+			height: 500px;
+
+		}
+
+		aside#Izq ul li {
+			background: #aaa;
+			padding: 10px;
+			margin: 5px 2px;
+			font-family: 'Tangerine', serif;
+			font-weight: bold;
+			font-size: 30px;
+
+			list-style: none;
+			list-style-position: inside;
+	
+		}
+
+		aside#Izq ul li a {
+			text-decoration: none;
+		}
+
+		article {
+			position: absolute;
+			top: 0px;
+			left: 200px;
+			width: 600px;
+			height: 500px;
+
+		}
+
+		article h1 {
+			font-family: 'Tangerine', serif;
+			font-size: 3em;
+			font-weight: bold;
+			margin-left: 20px;
+			margin-top: 10px;
+		}
+
+		article p {
+			margin: 10px 20px;
+			font-size: 14px;
+			text-align: justify;
+		}
+
+		article p img {
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 10px;
+			border-radius: 7px;
+		}
+
+
+		aside#Der {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 200px;
+			height: 500px;
+
+		}
+
+		aside#Der h1 {
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background: rgba(100, 0, 255, 1);
+			color: white;
+			font-family: sans-serif;
+			font-size: 20px;
+			margin-bottom: 5px;
+			border-radius: 3px;
+			box-shadow: 2px 2px 2px #888888;
+		}
+
+		aside#Der input {
+			padding: 10px;
+			margin: 5px 1px;
+			width: 176px;
+			border-radius: 3px;
+			box-shadow: 2px 2px 2px #888888;
+		}
+
+		aside#Der input[type="text"] {
+			background: url(usuario.png);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+		}
+
+		aside#Der input[type="password"] {
+			background: url(password.png);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+			border-radius: 3px;
+			box-shadow: 2px 2px 2px #888888;
+			margin: auto auto;
+		}
+
+		aside#Der input[type="email"] {
+			background: url(email.png);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+			border-radius: 3px;
+			box-shadow: 2px 2px 2px #888888;
+		}
+
+		aside#Der input[type="submit"] {
+			width: 200px;
+			background: rgba(100, 0, 100, .5);
+			border: 0;
+			border-radius: 3px;
+			box-shadow: 2px 2px 2px #888888;
+		}
+
+
+		footer {
+			position: relative;
+
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0px;
+			width: 800px;
+			height: 50px;
+			color: white;
+			font-family: sans-serif;
+			background: rgba(100, 0, 255, 1);
+			text-align: center;
+			line-height: 50px;
+			border-radius: 4px;
+			box-shadow: 4px 4px 4px #888888;
+			margin: auto auto;
+			
+			
+		}
+
+		table {
+			border: 1px solid #000
+		}
+
+		th {
+			width: 25%;
+			height: 25%;
+			text-align: left;
+			vertical-align: top;
+			border: 1px solid #000;
+			border-collapse: collapse;
+			padding: 0.3em;
+			color: #fff;
+			background: rgb(102, 11, 11);
+		}
+		td {
+			width: 25%;
+			height: 25%;
+			text-align: left;
+			vertical-align: top;
+			border: 1px solid #000;
+			border-collapse: collapse;
+			padding: 0.3em;
+		}
+
+		caption {
+
+			padding: 0.3em;
+			color: #fff;
+			background: rgb(2, 28, 255);
+
+		}
+		
+	</style>
+</head>
+
+
+<div id = "contenido">
+ <body>
+	<header>
+		<div id="logo"><a href="https://dimayor.com.co" title="Dimayor, División Mayor Fútbol Colombiano"><img src="logo-dimayor.png"></div>
+		<div id="twitter"><a href="https://twitter.com/dimayor?lang=es" title="twitter Dimayor-Colombia"><img src="twitter.png" width="100" height="100"
+					title="ir a Twitter"></a></div>
+		<div id="facebook"><a href="https://www.facebook.com/DimayorOficial/?rf=110813108943057" title="Facebook Dimayor-Colombia"><img src="facebook.png"
+					width="100" height="100" title="ir a Facebook"></div></a>
+		<div id="Youtube"><a href="https://www.youtube.com/channel/UCPFlvAUg0nImOvaYGTuyxLw" title="Canal Dimayor-Colombia"><img src="youtube.png" width="100" height="100"title="ir a Youtube" ></div></a>
+	</header>
+	<nav>
+		<ul>
+			<a href="https://dimayor.com.co/liga-betplay-dimayor/" title="Liga Aguila">
+				<li class="botones">Liga Aguila</li>
+			</a>
+			<a href="https://dimayor.com.co/torneo-betplay-dimayor/" title="Torneo Aguila">
+				<li class="botones">Torneo Aguila</li>
+			</a>
+			<a href="https://dimayor.com.co/copa-betplay-dimayor/" title="Copa Aguila">
+				<li class="botones">Copa Aguila</li>
+			</a>
+			<a href="https://dimayor.com.co/super-liga-2/" title="Superliga Aguila">
+				<li class="botones">Superliga Aguila</li>
+			</a>
+			<a href="https://dimayor.com.co/liga-femenina/" title="Liga Femenina">
+				<li class="botones">Liga Femenina</li>
+			</a>
+		</ul>
+	</nav>
+	<div id="tope">
+		<ul>
+			<li> <img src="liga-aguila.png" title = "visite todos los clubes de la Liga Aguila" width="100" height="100">
+				<h1>Clubes Liga</h1>
+				<p>Estos son todos los clubes de la Liga Aguila. Aqui podrá conocer el perfil e historia de cada uno de
+					los clubes de la liga Aguila Colombiana. </p>
+			</li>
+			<li> <img src="torneo-aguila.jpeg" title = "visite todos los clubes del torneo Aguila" height="100" width="100">
+				<h1>Clubes Torneo</h1>
+				<p>Estos son todos los clubes del Torneo Aguila. Aqui podrá conocer el perfil e historia de cada uno de
+					los clubes del Torneo Aguila Colombiano. </p>
+			</li>
+			<li> <img src="femeninas.jpg" title = "visite todos los clubes de Liga Aguila Femenina" width="100" height="100">
+				<h1>Clubes Femeninos</h1>
+				<p>Estos son todos los clubes de la Liga Aguila Femenina. Aqui podrá conocer el perfil e historia de
+					cada uno de los clubes de la Liga Aguila Femenina Colombiana. </p>
+			</li>
+		</ul>
+	</div>
+
+	<section>
+		<aside id="Izq">
+			<ul>
+				<li><a href="https://dimayor.com.co/calendario-2022/" title="Bienvenido al calendario 2019">Calendario 2019</a>
+				</li>
+				<li><a href="https://dimayor.com.co/fixture-de-la-liga-betplay-dimayor-ii-2021/"
+						title="Bienvenido al calendario Liga 2019-2">Calendario Liga 19-2</a></li>
+				<li><a href="https://dimayor.com.co/copa-betplay-dimayor/" title="Bienvenido al calendario Torneo 2019-2">Calendario Torneo 19-2</a></li>
+				<li><a href="https://dimayor.com.co/noticias/" title="Bienvenido a Noticias Dimayor">Noticias</a></li>
+			</ul>
+		</aside>
+		<article>
+			<h1>Historia</h1>
+			<p><img src="foto-presidente.jpeg" title = "Dr. Fernando Jaramillo Giraldo, actual presidente de Dimayor-Colombia" width="230" height="200">El presidente de la DIMAYOR en la actualidad es
+				el Doctor Fernando Jaramillo Giraldo, quien sucedió en el cargo al saliente presidente Jorge Enrique
+				Vélez, que había llegado en julio del 2018, para reemplazar a Jorge Perdomo.</p>
+			<p>Desde su fundación y hasta la fecha, la institución cuenta con 16 presidentes, así: Humberto Salcedo F
+				(1948-1949), Germán Ocampo (1949-1950), Arturo García (1951-1955), José Chalela Chalela (1956-1976),
+				Rafael Mc. Causland (1977), Alfonso Senior Quevedo (1977), Joaquín Lozada (1977-1980), Jaime Castro
+				(1980-1983), León Londoño Tamayo (1983-1988), Álex Gorayeb (1989 – 1990), Jorge Correa Pastrana
+				(1990-2002), Luis Bedoya Giraldo(2002-2006), Ramón Jesurun Franco (2006 – 2015), Jorge Perdomo (2015 –
+				2018), Jorge Enrique Vélez (2018 – 2020) y Fernado Jaramillo Giraldo (agosto 2020 – presente) </p>
+			<p>Desde los inicios de la DIMAYOR en 1948 hasta el 2001, en la Categoría A se realizaron campeonatos
+				anuales y se coronaba a un solo ganador. A partir del 2002 se instauraron los torneos cortos, con un
+				campeón semestral, es decir dos por año. El primer campeón del Fútbol Profesional Colombiano fue
+				Independiente Santa Fe.</p>
+			<center>
+				
+
+					<table title = "Tabla actualizada 8 clasificados, Liga Colombiana 2019-2">
+						<thead>
+							<tr>
+								<caption>
+									<h1>Liga Colombiana de Futbol 2019-2</h2>
+									<th>Pos</th>
+									<th>Nombre del Equipo</th>
+									<th>Pts</th>
+									<th>Pj</th>
+									<th>Pg</th>
+									<th>Pe</th>
+									<th>Pp</th>
+									<th>Gf</th>
+									<th>Gc</th>
+									<th>Dg</th>
+								</caption>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td> <img src="Alianza.png" height="20" width="20">Alianza Petrolera</td>
+								<td>21</td>
+								<td>10</td>
+								<td>6</td>
+								<td>3</td>
+								<td>1</td>
+								<td>10</td>
+								<td>5</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><img src="Nacional.png" height="20" width="20">Nacional</td>
+								<td>20</td>
+								<td>10</td>
+								<td>5</td>
+								<td>5</td>
+								<td>0</td>
+								<td>20</td>
+								<td>8</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><img src="america-de-cali.png">America de Cali</td>
+								<td>20</td>
+								<td>10</td>
+								<td>6</td>
+								<td>2</td>
+								<td>2</td>
+								<td>13</td>
+								<td>11</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><img src="cucuta-deportivo.png">Cucuta Deportivo</td>
+								<td>18</td>
+								<td>10</td>
+								<td>5</td>
+								<td>3</td>
+								<td>2</td>
+								<td>14</td>
+								<td>12</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><img src="america-de-cali.png">Deportivo Cali</td>
+								<td>17</td>
+								<td>10</td>
+								<td>5</td>
+								<td>2</td>
+								<td>3</td>
+								<td>15</td>
+								<td>9</td>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><img src="Millonarios.png" height="20" width="20">Millonarios</td>
+								<td>17</td>
+								<td>10</td>
+								<td>5</td>
+								<td>2</td>
+								<td>3</td>
+								<td>14</td>
+								<td>12</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><img src="deportes-tolima.png">Tolima</td>
+								<td>15</td>
+								<td>10</td>
+								<td>4</td>
+								<td>3</td>
+								<td>3</td>
+								<td>11</td>
+								<td>5</td>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td><img src="deportivo-pasto.png">Pasto</td>
+								<td>14</td>
+								<td>10</td>
+								<td>3</td>
+								<td>5</td>
+								<td>2</td>
+								<td>12</td>
+								<td>9</td>
+								<td>3</td>
+							</tr>
+						</tbody>
+					</table>
+			</center>
+		</article>
+		<aside id="Der" title = "Regístrate/Ingresa como usuario de Liga Colombiana 2019-2019-2">
+			<h1>Ingresar</h1>
+			<form>
+				<input type="text" placeholder="Usuario">
+				<input type="password" placeholder="Password">
+				<input type="email" placeholder="Email">
+				<input type="submit" value="Enviar">
+			</form>
+
+		</aside>
+	</section>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</div>
+
+</body>
+<center><footer> ©copyright: todos los derechos reservados Dimayor S.A
+</footer></center>
+</html>

@@ -1,0 +1,77 @@
+.ArbolD{
+    background: #fff;
+    border: 4px solid #000000;
+    border-radius: 8px;
+    width: 85%;
+    margin: auto;
+    height: 400px; 
+    margin: auto auto;
+    letter-spacing: -1px;
+}
+
+
+.ContenedorFor{
+    margin: auto auto;
+    width: 40%;
+    font-family: 'calibri';
+    border: #000000;
+    letter-spacing: -1px;
+
+}
+
+.Opciones{
+    margin: auto auto;
+    width: 40%;
+    height: 40%;
+    font-family: 'calibri';
+    letter-spacing: -1px;
+    border-spacing: 1px;
+    
+  
+}
+h1 {
+    background: linear-gradient(50deg, rgb(194, 6, 231) 0%, rgb(96, 25, 139) 100%);
+    margin: auto auto;
+    width: 40%;
+    font-family: 'calibri';
+    text-align: center;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.agergar_nodo{
+    margin: auto auto;
+    font-family: 'calibri';
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+
+.formulario_nodo{
+    margin: auto auto;
+    font-family: 'calibri';
+    letter-spacing: -1px;
+}
+
+
+*{
+    margin: auto auto;
+    font-family: 'calibri';
+}
+
+.echo{
+margin: auto auto;
+}
+
+.titulo{
+    margin: auto auto;
+    font-family: 'calibri';
+}
+
+.echoxd{
+    margin: auto auto;
+    font-family: 'calibri';
+    
+}
+
+

@@ -1,0 +1,31 @@
+* {
+    margin: auto auto;
+}
+
+
+h1 {
+    background: linear-gradient(50deg, rgb(194, 6, 231) 0%, rgb(96, 25, 139) 100%);
+    text-align: center;
+    width: 40%;
+    font-family: 'calibri';
+    
+
+}
+
+input  {
+    margin: auto auto;
+    text-align: center;
+    font-family: 'calibri';
+}
+
+div {
+    margin: auto auto;
+    text-align: center;
+    width: 40%;
+    height: 40%;
+    font-family: 'calibri';
+}
+
+.botonp{
+    
+}
